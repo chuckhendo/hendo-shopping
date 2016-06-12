@@ -12,11 +12,13 @@ export default class Login extends React.Component {
 
     render() {
         return (
-            <form className="login" onSubmit={this.login.bind(this) }>
-                <input ref="email" type="email" placeholder="Email" />
-                <input ref="password" type="password" placeholder="Password" />
-                <button type="submit">Login</button>
-            </form>
+            <div className="login-page">
+                <form className="login" onSubmit={this.login.bind(this) }>
+                    <input ref="email" type="email" placeholder="Email" />
+                    <input ref="password" type="password" placeholder="Password" />
+                    <button type="submit">Login</button>
+                </form>
+            </div>
         );
     }
 }
