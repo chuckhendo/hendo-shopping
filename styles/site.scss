@@ -71,12 +71,24 @@ body {
 }
 
 .main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+
     .toolbar {
         display: flex;
-        padding: 1rem;        
+        padding: 0.5rem;        
         background: $green;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
+        flex: 0 0 auto;
+
+        .actions {
+            padding: 0.5rem;
+            flex-direction: row;
+            display: flex;
+        }
 
         .title {
             font-weight: 400;
@@ -106,21 +118,26 @@ body {
         list-style: none;
         margin: 0;
         padding: 0;
+        flex: 1 1 0;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .item, input {
         padding: 1rem;  
         font-size: 1rem;      
+        border-radius: 0;
     }
     
     input {
+        padding: 0.5rem;
         width: 100%;
         border: none;
     }
 
     .item {
         list-style: none;
-        border-top: 1px solid rgba(0,0,0,0.1);
+        border-bottom: 1px solid rgba(0,0,0,0.1);
         &.completed {
             text-decoration: line-through;
             color: #ccc;

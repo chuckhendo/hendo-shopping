@@ -66,18 +66,19 @@ export default class Main extends React.Component {
         return (
             <div className="main">
                 <div className="toolbar">
-                    <h1 className="title"><span>Hendo</span>Shopping</h1>
-                    <button className="logout" onClick={this.logout.bind(this)}>Logout</button>
-                </div>
-                <form action="" onSubmit={this.addItem.bind(this)}>
-                    <input type="text" ref="newItem" onBlur={this.addItem.bind(this)} placeholder="Add item" />
-                    
-                    <ul className="list">
-                        {items.map((item) => {
-                            return <ListItem key={item.key} item={item} toggleCompleted={this.toggleCompleted.bind(this)} />;
-                        })}
-                    </ul>
-                </form>
+                    <div className="actions">
+                        <h1 className="title"><span>Hendo</span>Shopping</h1>
+                        <button className="logout" onClick={this.logout.bind(this)}>Logout</button>
+                    </div>
+                    <form action="" onSubmit={this.addItem.bind(this)}>                    
+                        <input type="text" ref="newItem" onBlur={this.addItem.bind(this)} placeholder="Add item" />
+                    </form>                        
+                </div>                    
+                <ul className="list">
+                    {items.map((item) => {
+                        return <ListItem key={item.key} item={item} toggleCompleted={this.toggleCompleted.bind(this)} />;
+                    })}
+                </ul>
             </div>
         );
     }
