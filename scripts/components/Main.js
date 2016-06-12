@@ -39,10 +39,12 @@ export default class Main extends React.Component {
     addItem(e) {
         e.preventDefault();
         const newItem = this.refs.newItem.value;
-        firebase.database().ref("items").push({
-            name: newItem,
-            completed: false
-        });
+        if(newItem.length) {
+            firebase.database().ref("items").push({
+                name: newItem,
+                completed: false
+            });
+        }
         this.refs.newItem.value = "";
     }
 

@@ -30,6 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .login {
@@ -37,6 +38,7 @@ body {
     background: #fff;
     margin: 0.5rem;
     padding: 1rem;
+    max-width: 400px;
 
     input {
         display: block;
@@ -94,6 +96,7 @@ body {
             font-size: 1rem;
             font-weight: 300;
             margin-left: auto;
+            padding-right: 0;
         }
     }
 
