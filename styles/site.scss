@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+
+$green: #adc9b8;
+$gold: #e2d56e;
+$pudding: #f7e6d8;
+$horchata: #ecd6c3;
+$rose: #e5babd;
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;                 
+}
+
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body {
+    background: lighten($pudding, 7%);
+    color: #111;
+}
+
+.login {
+    width: calc(100% - 2rem);
+    background: #fff;
+    margin: 1rem;
+    padding: 1rem;
+
+    input {
+        display: block;
+        width: 100%;
+        font-size: 2rem;
+        border: none;
+        border-bottom: 2px solid #888;
+        margin-top: 1rem;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:focus {
+            outline: none;
+            border-bottom-color: #333;
+        }
+    }
+
+    button {
+        font-size: 2rem;
+        width: 100%;
+        margin-top: 1rem;
+        border: none;
+        background: $rose;
+        padding: 0.5rem;
+        color: #fff;
+    }
+}
+
+.main {
+    .toolbar {
+        display: flex;
+        padding: 1rem;        
+        background: $green;
+        flex-direction: row;
+        justify-content: center;
+
+        .title {
+            font-weight: 400;
+            font-size: 1.2rem;
+            margin: 0;
+            text-transform: uppercase;
+
+            span {
+                font-weight: 200;
+            }
+        }
+
+        .logout {
+            background: none;
+            border: none;
+            align-self: flex-end;
+            font-size: 1rem;
+            font-weight: 300;
+            margin-left: auto;
+        }
+    }
+
+    .list {
+        background: #fff;
+        margin: 1rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .item, input {
+        padding: 1rem;        
+    }
+    
+    input {
+        width: 100%;
+        border: none;
+    }
+
+    .item {
+        list-style: none;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        &.completed {
+            text-decoration: line-through;
+            color: #ccc;
+        }
+    }
+}

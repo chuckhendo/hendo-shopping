@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "devDependencies": {
+    "@unumux/eslint-config-unumux": "^1.1.0",
+    "@unumux/ux-build-tools": "^3.1.2",
+    "classnames": "^2.2.5",
+    "firebase": "^3.0.4",
+    "firebase-tools": "^3.0.2",
+    "lodash": "^4.13.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-draggable": "^2.1.2",
+    "react-sortable": "^1.0.0"
+  },
+  "scripts": {
+    "deploy": "firebase deploy",
+    "start": "gulp --gulpfile=node_modules/@unumux/ux-build-tools/index.js --cwd=."
+  }
+}

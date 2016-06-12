@@ -1,0 +1,22 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": ".",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "ignore": [
+      "node_modules",
+      ".git",
+      ".vscode",
+      "package.json",
+      "*-debug.log",
+      "ux.json"
+    ]
+  }
+}
